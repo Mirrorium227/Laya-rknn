@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "target": "rk3576",
+  "variant": "split_fp16",
+  "lengths": [
+    96,
+    256,
+    1024
+  ],
+  "parts_per_length": 3,
+  "toolkit_version": "2.3.2",
+  "runtime_version": "2.3.2",
+  "checkpoint": {
+    "repository": "convaiinnovations/laya-multilingual",
+    "revision": "e4e9ddf21a7b1903b7acffd8814ad4307bf63a67",
+    "local_directory": "models/laya-multilingual",
+    "weight_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+  },
+  "scope": "Nine three-part FP16 RKNN models, three tracked shape manifests and external ARM64 Runtime. Hashes from the verified 2026-10-03 experiment snapshot; binaries are excluded from Git.",
+  "entries": [
+    {
+      "path": "bucket-study/artifacts/l1024_split_fp16/part0/model.rknn",
+      "bytes": 365890633,
+      "sha256": "2ad68647fc7b9ffbdc1dcb134446c97925235cc7615f14a6261555612226817d"
+    },
+    {
+      "path": "bucket-study/artifacts/l1024_split_fp16/part1/model.rknn",
+      "bytes": 17502307,
+      "sha256": "cfa4b448a669a3d98bcb9a9742adfbf0ddd368a482522b7af25d89af7a9a73b6"
+    },
+    {
+      "path": "bucket-study/artifacts/l1024_split_fp16/part2/model.rknn",
+      "bytes": 12733461,
+      "sha256": "b607087fc85b869d21c851788a9154637eb05bf655ab2a45e79962f3ca960cb7"
+    },
+    {
+      "path": "bucket-study/artifacts/l256_split_fp16/part0/model.rknn",
+      "bytes": 249754562,
+      "sha256": "99b1b7154f8c97672b44f8c89679bc189dcad4cd12a92463469b898e6d4cb6eb"
+    },
+    {
+      "path": "bucket-study/artifacts/l256_split_fp16/part1/model.rknn",
+      "bytes": 14842714,
+      "sha256": "27c9f27a3b4a11c558d9db0134b8f86faf701bd0cc38ca65d0f830980e6003dd"
+    },
+    {
+      "path": "bucket-study/artifacts/l256_split_fp16/part2/model.rknn",
+      "bytes": 12243473,
+      "sha256": "a8f6ad2eb6fed59331fe162db259585d868de740499edd5ef17a03029ba33f37"
+    },
+    {
+      "path": "bucket-study/artifacts/l96_split_fp16/part0/model.rknn",
+      "bytes": 241246907,
+      "sha256": "8d705d2e57f7ed6cb57a3ac4d8511d5d11bb9320c46c447ab83c0c1ab01fb1e9"
+    },
+    {
+      "path": "bucket-study/artifacts/l96_split_fp16/part1/model.rknn",
+      "bytes": 14615057,
+      "sha256": "a1e1464fec78b11e18a38135ab781ba409608b21f91522bdf91a3334259a4546"
+    },
+    {
+      "path": "bucket-study/artifacts/l96_split_fp16/part2/model.rknn",
+      "bytes": 12143053,
+      "sha256": "52797a60d90b91b99871ce5d80acdd4e0eec48b4bbaad5a0b4752156b34b00ad"
+    },
+    {
+      "path": "bucket-study/split/l1024/manifest.json",
+      "bytes": 1839,
+      "sha256": "2bde9cbe429105c983bac544aedcd2236c752bf43aa397764261fad3b698a996"
+    },
+    {
+      "path": "bucket-study/split/l256/manifest.json",
+      "bytes": 1830,
+      "sha256": "cb44f28eafdb61a3462905609e56cc1563a0b48d9b573e0e60844a9ef21fca65"
+    },
+    {
+      "path": "bucket-study/split/l96/manifest.json",
+      "bytes": 1821,
+      "sha256": "3d67c43d58e4ee9b0546c40d9efea8e2aca457a056f90b9ce699697ee7334b4a"
+    },
+    {
+      "path": "rknn-2.3.2/lib/librknnrt.so",
+      "bytes": 7726232,
+      "sha256": "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8"
+    }
+  ]
+}

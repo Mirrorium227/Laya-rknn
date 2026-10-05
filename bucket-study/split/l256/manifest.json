@@ -1,0 +1,101 @@
+{
+  "length": 256,
+  "parts": [
+    {
+      "part": 0,
+      "inputs": [
+        "embeddings",
+        "attention_mask",
+        "qtype",
+        "head_key_bias"
+      ],
+      "outputs": [
+        "/layers.0/self_attn/Softmax_output_0",
+        "/layers.0/self_attn/Transpose_5_output_0",
+        "/Add_output_0"
+      ],
+      "output_shapes": [
+        [
+          1,
+          12,
+          256,
+          256
+        ],
+        [
+          1,
+          12,
+          256,
+          64
+        ],
+        [
+          1,
+          256,
+          768
+        ]
+      ],
+      "bytes": 449415982,
+      "nodes": 2043
+    },
+    {
+      "part": 1,
+      "inputs": [
+        "/layers.0/self_attn/Softmax_output_0",
+        "/layers.0/self_attn/Transpose_5_output_0",
+        "/Add_output_0",
+        "head_key_bias"
+      ],
+      "outputs": [
+        "/layers.1/self_attn/Softmax_output_0",
+        "/layers.1/self_attn/Transpose_5_output_0",
+        "/layers.0/Add_1_output_0"
+      ],
+      "output_shapes": [
+        [
+          1,
+          12,
+          256,
+          256
+        ],
+        [
+          1,
+          12,
+          256,
+          64
+        ],
+        [
+          1,
+          256,
+          768
+        ]
+      ],
+      "bytes": 28367732,
+      "nodes": 106
+    },
+    {
+      "part": 2,
+      "inputs": [
+        "/layers.1/self_attn/Softmax_output_0",
+        "/layers.1/self_attn/Transpose_5_output_0",
+        "/layers.0/Add_1_output_0",
+        "marker_pos"
+      ],
+      "outputs": [
+        "logits",
+        "cls"
+      ],
+      "output_shapes": [
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          768
+        ]
+      ],
+      "bytes": 23636656,
+      "nodes": 50
+    }
+  ],
+  "cpu": "original word lookup/action/decode plus floating key mask and two np.isnan guards"
+}
